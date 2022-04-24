@@ -1,1 +1,9 @@
-/*# sourceMappingURL=about.css.map */
+.about {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  background: url(../assets/aboutbackground.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}/*# sourceMappingURL=about.css.map */
