@@ -42,24 +42,22 @@ class Footer {
 
     render() {
         return `
-        <div class="margin">
-        <div class="header__title-container >
-            <h1 class="header__title">BecomeBartender</h1>
+        <div class="primary-footer__container">
+        <h2 class="primary-footer__header">Get in Touch</h2>
+        <div class="primary-footer__icon-container">
+            <a class='primary-footer__link' href="https://instagram.com">
+                <img
+                src=""/>
+            </a>
+            <a class='primary-footer__link' href="https://facebook.com">
+                <img
+                src=""/>
+            </a>
+            <a class='primary-footer__link' href="https://twitter.com">
+                <img 
+                src=""/>
+            </a>
         </div>
-        <nav class="nav-bar"> 
-            <ul>
-                <a href="#">
-                    <li>Home</li>
-                </a>
-                <a href="./pages/about.html">
-                    <li>About</li>
-                </a>
-                <a href="./pages/contact-us.html">
-                    <li>Contact Us</li>
-                </a>
-
-            </ul>
-        </nav>
         </div>
         `
     }
