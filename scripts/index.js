@@ -30,6 +30,20 @@ class Header {
     }
 }
 
+class renderedHeader {
+    constructor() {
+        this.headerLink = new Header('../index.html', "../pages/about.html", "../pages/contact-us.html")
+    }
+    render() {
+        return `
+        <div>
+        ${this.header.render()}
+        </div>
+        `
+    }
+}
+
+
 const header = document.getElementById("header");
 let addHeader = new Header();
 header.innerHTML = addHeader.render();
@@ -42,21 +56,23 @@ class Footer {
 
     render() {
         return `
-        <div class="primary-footer__container">
-        <h2 class="primary-footer__header">Get in Touch</h2>
-        <div class="primary-footer__icon-container">
+        <div class="margin">
+        <div class="footer-container">
+        <h2 class="footer__header">Get in Touch</h2>
+        <div class="footer__icon-container">
             <a class='primary-footer__link' href="https://instagram.com">
                 <img
-                src=""/>
+                src="../assets/Icons/SVG/icon-instagram.svg"/>
             </a>
             <a class='primary-footer__link' href="https://facebook.com">
                 <img
-                src=""/>
+                src="../assets/Icons/SVG/icon-facebook.svg"/>
             </a>
             <a class='primary-footer__link' href="https://twitter.com">
                 <img 
-                src=""/>
+                src="../assets/Icons/SVG/icon-twitter.svg"/>
             </a>
+        </div>
         </div>
         </div>
         `
