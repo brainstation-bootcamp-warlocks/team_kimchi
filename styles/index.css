@@ -9,7 +9,7 @@
      object-fit: cover;
   width: 100vw;
   height: 50vh;
-  position: fixed;
+  position: absolute;
   z-index: -100;
   opacity: 0.8;
 }
@@ -23,10 +23,7 @@
   flex-direction: column;
 }
 .hero__title {
-<<<<<<< HEAD
   color: #802b00;
-=======
-  color: #ffffff;
 }
 
 body {
@@ -36,5 +33,4 @@ body {
 
 footer {
   background-color: purple;
->>>>>>> 06ac1c0bde715f6f59466d326948d43558bdaf7e
 }/*# sourceMappingURL=index.css.map */
