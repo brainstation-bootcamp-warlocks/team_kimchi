@@ -1,19 +1,21 @@
 class Header {
-    constructor(homeLink, aboutLink, contactLink) {
+    constructor(homeLink, aboutLink, contactLink, imageLink) {
         this.homeLink = homeLink;
         this.aboutLink = aboutLink;
         this.contactLink = contactLink;
+        this.imageLink = imageLink;
     }
 
     render() {
         return `
         <div class="margin">
+        <img src=${this.imageLink} />
         <div class="header__title-container >
             <h1 class="header__title">BecomeBartender</h1>
         </div>
         <nav class="nav-bar"> 
             <ul>
-                <a href=${this.homeLink}>
+                <a href="${this.homeLink}">
                     <li>Home</li>
                 </a>
                 <a href="${this.aboutLink}">
@@ -22,7 +24,6 @@ class Header {
                 <a href="${this.contactLink}">
                     <li>Contact Us</li>
                 </a>
-
             </ul>
         </nav>
         </div>
@@ -32,19 +33,19 @@ class Header {
 
 class RenderedHeader {
     constructor() {
-        this.headerLink = new Header
-        ("../index.html", "../pages/about.html", "../pages/contact-us.html")
+        this.headerLinks = new Header("#", "./pages/about.html", "./pages/contact-us.html", "./assets/logo.png");
     }
+
     render() {
         return `
-        ${this.header.render()};
+        ${this.headerLinks.render()};
         `
     }
 }
 
 
 const header = document.getElementById("header");
-let addHeader = new Header();
+let addHeader = new RenderedHeader();
 header.innerHTML = addHeader.render();
 
 class Footer {
