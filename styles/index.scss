@@ -2,3 +2,13 @@
 @use './partials/mixins' as *;
 @use './partials/variables' as *;
 @use './partials/components/hero' as *;
+
+
+body {
+	margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: purple;
+}
