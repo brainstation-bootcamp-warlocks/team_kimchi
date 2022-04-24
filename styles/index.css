@@ -53,7 +53,7 @@ img {
      object-fit: cover;
   width: 100vw;
   height: 50vh;
-  position: fixed;
+  position: absolute;
   z-index: -100;
   opacity: 0.8;
 }
@@ -68,4 +68,16 @@ img {
 }
 .hero__title {
   color: #802b00;
+<<<<<<< HEAD
+=======
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: purple;
+>>>>>>> 31911005b1a09ed6eae621061d6dd4b869735e13
 }/*# sourceMappingURL=index.css.map */

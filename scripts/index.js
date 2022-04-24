@@ -114,3 +114,5 @@ class Footer {
 const footer = document.getElementById("footer");
 const addFooter = new Footer();
 footer.innerHTML = addFooter.render();
+
+const apiURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=s"
