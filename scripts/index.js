@@ -13,7 +13,7 @@ class Header {
         </div>
         <nav class="nav-bar"> 
             <ul>
-                <a href="${this.homeLink}">
+                <a href=${this.homeLink}>
                     <li>Home</li>
                 </a>
                 <a href="${this.aboutLink}">
@@ -26,19 +26,18 @@ class Header {
             </ul>
         </nav>
         </div>
-        `
+        `;
     }
 }
 
-class renderedHeader {
+class RenderedHeader {
     constructor() {
-        this.headerLink = new Header('../index.html', "../pages/about.html", "../pages/contact-us.html")
+        this.headerLink = new Header
+        ("../index.html", "../pages/about.html", "../pages/contact-us.html")
     }
     render() {
         return `
-        <div>
-        ${this.header.render()}
-        </div>
+        ${this.header.render()};
         `
     }
 }
@@ -49,9 +48,7 @@ let addHeader = new Header();
 header.innerHTML = addHeader.render();
 
 class Footer {
-    constructor(title, home) {
-        this.title = title;
-        this.home = home;
+    constructor() {
     }
 
     render() {
@@ -62,20 +59,26 @@ class Footer {
         <div class="footer__icon-container">
             <a class='primary-footer__link' href="https://instagram.com">
                 <img
-                src="../assets/Icons/SVG/icon-instagram.svg"/>
+                src="./assets/Icons/SVG/icon-instagram.svg"
+                alt="instagram"
+                />
             </a>
             <a class='primary-footer__link' href="https://facebook.com">
                 <img
-                src="../assets/Icons/SVG/icon-facebook.svg"/>
+                src="./assets/Icons/SVG/icon-facebook.svg"
+                alt="facebook"
+                />
             </a>
             <a class='primary-footer__link' href="https://twitter.com">
                 <img 
-                src="../assets/Icons/SVG/icon-twitter.svg"/>
+                src="./assets/Icons/SVG/icon-twitter.svg"
+                alt="twitter"
+                />
             </a>
         </div>
         </div>
         </div>
-        `
+        `;
     }
 }
 

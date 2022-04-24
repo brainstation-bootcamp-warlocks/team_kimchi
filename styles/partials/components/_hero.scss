@@ -1,0 +1,34 @@
+@use "../variables" as *;
+
+.hero {
+    margin: 0 auto;
+    width: 100vw;
+    height: 50vh;
+    border: solid 2px red;
+
+    &__video {
+        object-fit: cover;
+        width: 100vw;
+        height: 50vh;
+        position: fixed;
+        z-index: -100;
+        opacity: 0.8;
+    }
+
+    &__container {
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        border: solid green 2px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__title {
+        color: $primary-white;
+
+    }
+
+
+}
