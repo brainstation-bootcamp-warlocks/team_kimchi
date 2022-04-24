@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"sources":["partials/components/_hero.scss","index.css","partials/_variables.scss"],"names":[],"mappings":"AAEA;EACI,cAAA;EACA,YAAA;EACA,YAAA;EACA,qBAAA;ACDJ;ADGI;EACI,oBAAA;KAAA,iBAAA;EACA,YAAA;EACA,YAAA;EACA,eAAA;EACA,aAAA;EACA,YAAA;ACDR;ADII;EACI,YAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,uBAAA;EACA,sBAAA;ACFR;ADKI;EACI,cE3BQ;ADwBhB","file":"index.css"}
+=======
+{"version":3,"sources":["partials/components/_hero.scss","index.css","partials/_variables.scss","index.scss"],"names":[],"mappings":"AAEA;EACI,cAAA;EACA,YAAA;EACA,YAAA;EACA,qBAAA;ACDJ;ADGI;EACI,oBAAA;KAAA,iBAAA;EACA,YAAA;EACA,YAAA;EACA,eAAA;EACA,aAAA;EACA,YAAA;ACDR;ADII;EACI,YAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,uBAAA;EACA,sBAAA;ACFR;ADKI;EACI,cEzBQ;ADsBhB;;AEnBA;EACC,SAAA;EACG,UAAA;AFsBJ;;AEnBA;EACI,wBAAA;AFsBJ","file":"index.css"}
+>>>>>>> 06ac1c0bde715f6f59466d326948d43558bdaf7e

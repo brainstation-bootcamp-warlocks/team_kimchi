@@ -23,5 +23,18 @@
   flex-direction: column;
 }
 .hero__title {
+<<<<<<< HEAD
   color: #802b00;
+=======
+  color: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: purple;
+>>>>>>> 06ac1c0bde715f6f59466d326948d43558bdaf7e
 }/*# sourceMappingURL=index.css.map */
