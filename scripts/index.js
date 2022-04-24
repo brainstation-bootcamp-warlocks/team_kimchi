@@ -8,13 +8,13 @@ class Header {
 
     render() {
         return `
-        <div class="margin">
-        <img src=${this.imageLink} />
-        <div class="header__title-container >
-            <h1 class="header__title">BecomeBartender</h1>
-        </div>
+        <div class="header-margin margin">
+            <img src=${this.imageLink} />
+            <div class="header__title-container >
+                <h1 class="header__title">BecomeBartender</h1>
+            </div>
         <nav class="nav-bar"> 
-            <ul>
+            <ul class="nav-bar__list">
                 <a href="${this.homeLink}">
                     <li>Home</li>
                 </a>
@@ -54,23 +54,23 @@ class Footer {
 
     render() {
         return `
-        <div class="margin">
+        <div class="footer-margin margin">
         <div class="footer-container">
         <h2 class="footer__header">Follow Us</h2>
         <div class="footer__icon-container">
-            <a class='primary-footer__link' href="https://instagram.com">
+            <a href="https://instagram.com">
                 <img
                 src="./assets/Icons/SVG/icon-instagram.svg"
                 alt="instagram"
                 />
             </a>
-            <a class='primary-footer__link' href="https://facebook.com">
+            <a href="https://facebook.com">
                 <img
                 src="./assets/Icons/SVG/icon-facebook.svg"
                 alt="facebook"
                 />
             </a>
-            <a class='primary-footer__link' href="https://twitter.com">
+            <a href="https://twitter.com">
                 <img 
                 src="./assets/Icons/SVG/icon-twitter.svg"
                 alt="twitter"
@@ -103,6 +103,7 @@ class Footer {
 				</ul>
 				<a href="mailto:pearl.gregg@limitlessag.com" class="primary-footer__email">pearl.gregg@limitlessag.com</a>
 			</div>
+        </div>
         </div>
         </div>
         `;

@@ -1,3 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: #802b00;
+}
+
 .margin {
   margin: 2rem;
 }
@@ -8,6 +17,29 @@ li {
 
 a {
   text-decoration: none;
+}
+
+.header-margin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav-bar__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+img {
+  height: 10%;
+  width: 10%;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .hero {
@@ -35,18 +67,5 @@ a {
   flex-direction: column;
 }
 .hero__title {
-<<<<<<< HEAD
   color: #802b00;
-=======
-  color: #ffffff;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-footer {
-  background-color: purple;
->>>>>>> 06ac1c0bde715f6f59466d326948d43558bdaf7e
 }/*# sourceMappingURL=index.css.map */
