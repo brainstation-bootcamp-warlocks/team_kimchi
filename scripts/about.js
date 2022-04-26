@@ -38,7 +38,7 @@ class RenderedHeader {
 
     render() {
         return `
-        ${this.headerLinks.render()};
+        ${this.headerLinks.render()}
         `
     }
 }
