@@ -1,10 +1,3 @@
-let contactContainer = document.getElementById("contact__container");
-
-let form = document.createElement("form");
-form.setAttribute("action", "");
-form.setAttribute("method", "post");
-contactContainer.appendChild(form);
-
 class Header {
     constructor(homeLink, aboutLink, contactLink, imageLink) {
         this.homeLink = homeLink;
@@ -16,7 +9,7 @@ class Header {
     render() {
         return `
         <div class="header-margin margin">
-            <img class="header__logo"src=${this.imageLink} />
+            <img class="header__logo" src=${this.imageLink} />
             <div class="header__title-container >
                 <h1 class="header__title">BecomeBartender</h1>
             </div>
@@ -37,9 +30,10 @@ class Header {
         `;
     }
 }
+
 class RenderedHeader {
     constructor() {
-        this.headerLinks = new Header("../index.html", "./about.html", "./contact-us.html", "../assets/logo.png");
+        this.headerLinks = new Header("../index.html", "#", "./contact-us.html", "../assets/logo.png");
     }
 
     render() {
@@ -84,6 +78,7 @@ class Footer {
                 />
             </a>
         </div>
+
         <h2>Become Bartender<h2>
         </div>
         </div>
@@ -94,3 +89,65 @@ class Footer {
 const footer = document.getElementById("footer");
 const addFooter = new Footer();
 footer.innerHTML = addFooter.render();
+
+
+// creating random cocktail picker 
+
+let i = 0;
+let cocktail = []
+let nextBtn = document.querySelector('.next');
+let prevBtn = document.querySelector('.prev');
+let cocktailImg = document.querySelector('.cocktailImg');
+let cocktailName = document.querySelector('.cocktailName');
+
+
+
+const loadCocktail = () => {
+    axios
+    .get('https://www.thecocktaildb.com/api/json/v2/9973533/randomselection.php')
+    .then((response) => {
+        console.log(response.data);
+        let cocktail = response.data;
+
+        cocktailName.innerHTML = `${cocktail.drinks[0].strDrink}`;
+        cocktailImg.src = cocktail.drinks[0].strDrinkThumb;
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+};
+
+loadCocktail();
+
+/*     function loop() {
+        if (i === cocktail[0].length) {
+            i = 0;
+        } else if (i === -1) {
+            i = cocktail[0].length - 1;
+        }
+    }
+    
+    function addData() {
+        cocktailName.innerHTML = `${cocktail.drink[0].strDrink}`
+        cocktailImg.src = cocktail.drink[0].strDrinkThumb
+    
+    }
+    
+    function clearImg() {
+        cocktailName.innerHTML = ``;
+        cocktailImg.src = null;
+    }
+    
+    nextBtn.addEventListener('click', function () {
+        i++;
+        loop();
+        clearImg();
+        addData();
+    })
+    
+    prevBtn.addEventListener('click', function () {
+        i--;
+        loop();
+        clearImg();
+        addData();
+    }) */

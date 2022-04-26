@@ -1,3 +1,4 @@
+// constructed a header constructor that took in dynamic instances of the relative pathing towards other pages
 class Header {
     constructor(homeLink, aboutLink, contactLink, imageLink) {
         this.homeLink = homeLink;
@@ -9,7 +10,7 @@ class Header {
     render() {
         return `
         <div class="header-margin margin">
-            <img src=${this.imageLink} />
+            <img class="header__logo" src=${this.imageLink} />
             <div class="header__title-container >
                 <h1 class="header__title">BecomeBartender</h1>
             </div>
@@ -31,6 +32,7 @@ class Header {
     }
 }
 
+// created another class that rendered the header with the values i wanted to input 
 class RenderedHeader {
     constructor() {
         this.headerLinks = new Header("#", "./pages/about.html", "./pages/contact-us.html", "./assets/logo.png");
@@ -43,11 +45,11 @@ class RenderedHeader {
     }
 }
 
-
 const header = document.getElementById("header");
 let addHeader = new RenderedHeader();
 header.innerHTML = addHeader.render();
 
+// created a footer class thats only purpose was to generate the HTML on the page with the relative pathing hard coded into the HTML, and not left dynamic
 class Footer {
     constructor() {
     }
@@ -80,39 +82,16 @@ class Footer {
 
         <h2>Become Bartender<h2>
 
-        <div class="primary-footer__info-container">
-			<div>
-				<ul class="primary-footer__list">
-					<li class="primary-footer__list-item primary-footer__list-item--bold">Park Sejin</li>
-					<li class="primary-footer__list-item primary-footer__list-item--bold">Manhattan Management</li>
-				</ul>
-				<ul class="primary-footer__list">
-					<li class="primary-footer__list-item">24 Kennedy Penthouse,</li>
-					<li class="primary-footer__list-item">Brooklyn, NY 53831, USA</li>
-				</ul>
-				<a href="mailto:myfakeemail@email.com" class="primary-footer__email">myreallyfakeEmail@fake.com</a>
-			</div>
-			<div>
-				<ul class="primary-footer__list">
-					<li class="primary-footer__list-item primary-footer__list-item--bold">Mark Macaraig</li>
-					<li class="primary-footer__list-item primary-footer__list-item--bold">Limitless Drinking Groups</li>
-				</ul>
-				<ul class="primary-footer__list ">
-					<li class="primary-footer__list-item">59 Bremner Rd</li>
-					<li class="primary-footer__list-item">New York, </li>
-				</ul>
-				<a href="mailto:pearl.gregg@limitlessag.com" class="primary-footer__email">pearl.gregg@limitlessag.com</a>
-			</div>
-        </div>
         </div>
         </div>
         `;
     }
 }
 
-
+// referencing the footer that has the element of id
 const footer = document.getElementById("footer");
+// created a new variable that creates a new Footer class
 const addFooter = new Footer();
+//setting the value of footer to the class but rendered
 footer.innerHTML = addFooter.render();
 
-const apiURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=s"
