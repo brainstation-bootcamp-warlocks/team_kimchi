@@ -1,9 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: #DEB887;
+}
+
+.margin {
+  margin: 2rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-margin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav-bar__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+img {
+  height: 10%;
+  width: 10%;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .about {
   margin: 0 auto;
   width: 100vw;
-  height: 100vh;
-  background: url(../assets/aboutbackground.jpg);
+  background: url(../assets/about_background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  opacity: 0.8;
+  color: white;
+}
+.about__container {
+  width: 50vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.about__title {
+  font-size: 2rem;
+}
+.about__subtitle {
+  font-size: 1.6rem;
+}
+.about__main-content, .about__sub-content {
+  font-size: 1.2rem;
+}
+.about__main-content--lists, .about__sub-content--lists {
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
 }/*# sourceMappingURL=about.css.map */

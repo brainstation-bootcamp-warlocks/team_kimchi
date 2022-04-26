@@ -4,7 +4,7 @@ body {
 }
 
 footer {
-  background-color: #802b00;
+  background-color: #DEB887;
 }
 
 .margin {
@@ -67,17 +67,5 @@ img {
   flex-direction: column;
 }
 .hero__title {
-  color: #802b00;
-<<<<<<< HEAD
-=======
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-footer {
-  background-color: purple;
->>>>>>> 31911005b1a09ed6eae621061d6dd4b869735e13
+  color: #DEB887;
 }/*# sourceMappingURL=index.css.map */

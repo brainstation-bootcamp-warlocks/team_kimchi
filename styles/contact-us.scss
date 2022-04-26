@@ -1,0 +1,50 @@
+@use "./partials/variables" as *;
+@use './partials/global' as *;
+
+.contact {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background: url(../assets/contactus_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+
+    &__heading {
+        font-size: 2rem;
+    }
+
+    &__name, &__email, &__message{
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+
+    &__submit {
+        color: $primary-brown;
+        width: 50%;
+        height: 10%;
+        margin: 0 auto;
+        border-radius: 1rem;
+        font-size: 1.2rem;
+
+        &:hover {
+            background-color: $primary-brown;
+            color: white;
+        }
+    }
+    
+
+}
+
+#contact__container{
+    width: 50vw;
+    height: 70vh;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
