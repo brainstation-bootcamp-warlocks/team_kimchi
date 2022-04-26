@@ -11,7 +11,7 @@ class Header {
         return `
         <div class="header-margin margin">
             <img class="header__logo" src=${this.imageLink} />
-            <div class="header__title-container >
+            <div class="header__title-container">
                 <h1 class="header__title">BecomeBartender</h1>
             </div>
         <nav class="nav-bar"> 
