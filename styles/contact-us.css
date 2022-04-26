@@ -4,7 +4,7 @@ body {
 }
 
 footer {
-  background-color: #802b00;
+  background-color: #DEB887;
 }
 
 .margin {
@@ -43,4 +43,46 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.contact {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  color: white;
+  background: url(../assets/contactus_background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+.contact__heading {
+  font-size: 2rem;
+}
+.contact__name, .contact__email, .contact__message {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.contact__submit {
+  color: #DEB887;
+  width: 50%;
+  height: 10%;
+  margin: 0 auto;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+}
+.contact__submit:hover {
+  background-color: #DEB887;
+  color: white;
+}
+
+#contact__container {
+  width: 50vw;
+  height: 70vh;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }/*# sourceMappingURL=contact-us.css.map */
