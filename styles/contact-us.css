@@ -6,7 +6,6 @@ body {
 footer {
   background-color: #DEB887;
   position: fixed;
-  left: 0;
   bottom: 0;
   width: 100%;
 }
@@ -27,11 +26,9 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
-.header__title-container {
-  margin-top: 3rem;
-}
 .header__logo {
   height: 10%;
   width: 10%;
@@ -43,7 +40,6 @@ a {
 
 .nav-bar {
   margin-right: 3rem;
-  margin-top: 2.2rem;
 }
 .nav-bar__list {
   display: flex;
@@ -54,7 +50,8 @@ a {
 .footer-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .contact {
