@@ -124,6 +124,7 @@ const loadCocktail = () => {
 
 loadCocktail();
 
+
 /*     function loop() {
         if (i === cocktail[0].length) {
             i = 0;

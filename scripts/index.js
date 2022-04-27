@@ -102,3 +102,82 @@ const addFooter = new Footer();
 //setting the value of footer to the class but rendered
 footer.innerHTML = addFooter.render();
 
+const cocktailDetails = document.getElementById('cocktail-details')
+const allCocktails = document.getElementById('cocktails')
+const searchInput = document.getElementById('search-input')
+const searchBtn = document.getElementById('search-btn')
+const errorMessage = document.getElementById('error-message')
+
+// search button event handler
+searchBtn.addEventListener('click', function() {
+    allCocktails.innerHTML = ''
+    cocktailDetails.innerHTML = ''
+    const searchText = searchInput.value
+    const searchURL = axios 
+    .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText}`)
+    
+    .then((response) => {
+        console.log(response.data);
+        let searchDrink = response.data
+//        console.log(searchDrink.drinks[0]);
+
+        if(searchText === '') {
+            errorMessage.innerText = `Search box must be filled`
+        } else {
+            errorMessage.innerText = 'Cocktails'
+            showCocktail(searchDrink.drinks)
+        }
+    })
+    .catch((error) => {
+        searchInput.value = '';
+        console.log(error);
+    })
+    
+});
+
+// display cocktail function
+const showCocktail = (drink) => {
+    drink.forEach(data => {
+        console.log(data)
+        const div = document.createElement('div')
+        div.innerHTML = `
+            <div class="">
+                <img src="${data.strDrinkThumb}" class="" alt="...">
+                <div class="">
+                    <h5 class="">${data.strDrink}</h5>
+                    <button onclick="displayDetails(${data.idDrink})" class="">Click for Instructions!</button>
+                </div>
+            </div>
+        `
+        allCocktails.appendChild(div);
+
+    });
+};
+
+// display drink details
+const displayDetails = (drinkId) => {
+    const lookupURL = axios 
+    .get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`) 
+
+    .then((response) => {
+        console.log(response.data)
+        showDetails(response.data.drinks[0])
+    }
+    )};
+
+const showDetails = (drink) => {
+    console.log(drink);
+
+    drinkDetails.innerHTML = `
+        <div class="">
+            <div class="">
+                <div class="">
+                    <h5><span class="">Category:</span> ${drink.strCategory}</h5>
+                    <h5><span class="">Type of Glass:</span> ${drink.strGlass}</h5>
+                    <h5 class="">Instructions:</h5> <p>${drink.strInstructions}</p>
+                </div>
+            </div>
+        </div>
+    `
+}
+
