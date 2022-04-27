@@ -19,15 +19,26 @@
         <video class=hero__video src="./assets/backgroundvideo.mp4" autoplay loop playsinline muted></video>
         <div class="hero__container">
             <h2 class="hero__title">Become Bartender</h2>
-            <form action="" class="hero_searchbar">
-                <input type="text" placeholder="Search Your Cocktail" name="search" id="search-field">
-            </form>
-        </div>
-        </div>
-<!-- Cocktail Gallery Selection -->
-            <div class="cocktails-gallery margin" id="search-results">
-                <h2>cocktails</h2>
+            <div>
+                <input type="text" placeholder="Search Your Cocktail" name="search" id="search-input">
+                <button id="search-btn">Search</button>
             </div>
+        </div>
+        </div>
+<!-- Cocktail  Selection -->
+        <div class="margin">
+            <!-- Cocktail Area -->
+            <div id="cocktails">
+            </div>
+
+            <!-- Details Area -->
+            <div id="cocktail-details">
+            </div>
+
+            <!-- Error Message -->
+            <h2 id="error-message">
+            </h2>
+        </div>
     </main>
 
 <!-- Footer Section -->

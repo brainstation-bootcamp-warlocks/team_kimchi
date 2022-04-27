@@ -5,8 +5,6 @@ body {
 
 footer {
   background-color: #DEB887;
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
 
@@ -20,6 +18,7 @@ li {
 
 a {
   text-decoration: none;
+  color: #DEB887;
 }
 
 .header-margin {
