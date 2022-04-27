@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.0/axios.min.js" defer></script>
     <title>BB</title>
 </head>
 <body>
@@ -23,30 +24,41 @@
             <div>
                 <input type="text" placeholder="Search Your Cocktail" name="search" id="search-input">
                 <button id="search-btn">Search</button>
+                <button id="random" onclick="loadCocktail()"> Random Drink Picker </button>
             </div>
         </div>
         </div>
+    <div class="cocktail-gallery__container">   
+<!-- random Cocktail Picker -->
+    <div class="margin" id="cocktail">
+        <div class="cocktails">
+            <div class="cocktail__name"></div>
+            <img src="" class="cocktail__img" />
+        </div>
+    </div>
 <!-- Cocktail  Selection -->
-        <div class="margin">
-            <!-- Cocktail Area -->
+        <div class="margin">     
+            <!-- Cocktail Rendered Area -->
             <div id="cocktails">
+                
             </div>
-
-            <!-- Details Area -->
             <div id="cocktail-details">
-            </div>
 
+            </div>
             <!-- Error Message -->
-            <h2 id="error-message">
+            <h2 class="error-message" id="error-message">
+
             </h2>
         </div>
+    </div> 
     </main>
 
 <!-- Footer Section -->
     <footer id="footer">
+
     </footer>
 
     <script src="./scripts/index.js"></script>
-    <script src="./scripts/search.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.0/axios.min.js"></script>
 </body>
 </html>

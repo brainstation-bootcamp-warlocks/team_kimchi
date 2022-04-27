@@ -1,9 +1,32 @@
 @use './partials/global' as *;
-@use './partials/mixins' as *;
 @use './partials/variables' as *;
 @use './partials/components/hero' as *;
 @use './partials/components/header' as *;
 @use './partials/components/footer' as *;
 
+.cocktail {
+
+    &__img {
+        height: 250px;
+        width: 250px;
+        border: none;
+    }
+}
+
+.cocktails {
+    text-align: center;
+}
+
+.cocktail-gallery {
+
+    &__container {
+        padding-bottom: 2rem;
+        margin: 0;
+    }
+}
+
+.error-message {
+    margin: 0;
+}
 
 

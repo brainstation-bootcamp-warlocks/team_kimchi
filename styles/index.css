@@ -61,6 +61,9 @@ a {
   align-items: center;
 }
 
+.header {
+  width: 100%;
+}
 .header__logo-container {
   width: 30vw;
 }
@@ -96,6 +99,7 @@ footer {
 
 .footer {
   margin: 0 auto;
+  width: 100vw;
 }
 .footer-container {
   margin: 0 1rem;
@@ -127,4 +131,23 @@ footer {
 }
 .footer__name-container {
   width: 30vw;
+}
+
+.cocktail__img {
+  height: 250px;
+  width: 250px;
+  border: none;
+}
+
+.cocktails {
+  text-align: center;
+}
+
+.cocktail-gallery__container {
+  padding-bottom: 2rem;
+  margin: 0;
+}
+
+.error-message {
+  margin: 0;
 }/*# sourceMappingURL=index.css.map */
