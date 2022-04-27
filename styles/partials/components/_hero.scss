@@ -4,7 +4,6 @@
     margin: 0 auto;
     width: 100vw;
     height: 50vh;
-    border: solid 2px red;
 
     &__video {
         object-fit: cover;
@@ -19,7 +18,6 @@
         width: 100vw;
         height: 50vh;
         display: flex;
-        border: solid green 2px;
         align-items: center;
         justify-content: center;
         flex-direction: column;
@@ -27,7 +25,12 @@
 
     &__title {
         color: $primary-brown;
+        font-size: 2rem;
+        text-transform: uppercase;
 
+        &--span {
+            color: white;
+        }
     }
 
 

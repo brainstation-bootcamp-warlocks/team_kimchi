@@ -9,7 +9,9 @@ class Header {
     render() {
         return `
         <div class="header-margin margin">
+            <div class="header__logo-container">
             <img class="header__logo" src=${this.imageLink} />
+            </div>
             <div class="header__title-container">
                 <h1 class="header__title">BecomeBartender</h1>
             </div>
@@ -55,32 +57,35 @@ class Footer {
 
     render() {
         return `
-        <div class="footer-margin margin">
         <div class="footer-container">
-        <h2 class="footer__header">Follow Us</h2>
         <div class="footer__icon-container">
             <a href="https://instagram.com">
                 <img
                 src="../assets/Icons/SVG/icon-instagram.svg"
-                alt="instagram"
+                alt="instagram" class="footer__icon"
                 />
             </a>
             <a href="https://facebook.com">
                 <img
                 src="../assets/Icons/SVG/icon-facebook.svg"
-                alt="facebook"
+                alt="facebook" class="footer__icon"
                 />
             </a>
             <a href="https://twitter.com">
                 <img 
                 src="../assets/Icons/SVG/icon-twitter.svg"
-                alt="twitter"
+                alt="twitter" class="footer__icon"
                 />
             </a>
         </div>
-
-        <h2>Become Bartender<h2>
+        <div class="footer__copyright-container">
+        <p class="footer__copyright">Copyright BecomeBartender &amp;copy 2022 All Rights Reserved</p>
         </div>
+
+        <div class="footer__name-container">
+        <h3 class="footer__name">BecomeBartender</h3>
+        </div>
+
         </div>
         `;
     }
