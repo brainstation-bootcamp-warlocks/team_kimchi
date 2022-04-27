@@ -168,7 +168,7 @@ const displayDetails = (drinkId) => {
 const showDetails = (drink) => {
     console.log(drink);
 
-    drinkDetails.innerHTML = `
+    cocktailDetails.innerHTML = `
         <div class="">
             <div class="">
                 <div class="">

@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Prompt", sans-serif, Verdana, sans-serif;
 }
 
 footer {
@@ -11,6 +10,7 @@ footer {
 
 .margin {
   margin: 0, 2rem;
+  font-family: "Prompt", sans-serif, Verdana, sans-serif;
 }
 
 li {
