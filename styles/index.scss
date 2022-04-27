@@ -13,6 +13,11 @@
     }
 
     &__random-container {
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    &__rendered {
         text-align: center;
     }
 
@@ -20,6 +25,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
     }
 
     &__rendered-name {
@@ -28,7 +34,17 @@
 
     &__detail-btn {
         height: 1.5rem;
-        width: 20%;
+        width: 10rem;
+    }
+
+    &__name {
+        font-size: 1.75rem;
+        font-weight: 600;
+    }
+
+    &__search-result {
+        text-align: center;
+        margin: 0 4rem 2rem;
     }
 }
 

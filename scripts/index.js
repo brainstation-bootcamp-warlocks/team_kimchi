@@ -137,7 +137,7 @@ searchBtn.addEventListener('click', function() {
 });
 
 // input field event handler
-searchInput.addEventListener('keydown', function() {
+searchInput.addEventListener('keypress', function() {
     cocktailDetails.innerHTML = '';
     cocktailImg.src = '';
     cocktailName.innerHTML = '';
@@ -160,16 +160,15 @@ searchInput.addEventListener('keydown', function() {
 // display cocktail function
 const displayCocktail = (drink) => {
     drink.forEach(data => {
-        console.log(data)
-        const div = document.createElement('div')
+        console.log(data);
+        const div = document.createElement('div');
+        div.classList.add("cocktail__rendered");
         div.innerHTML = `
-            <div class="margin">
                 <img class="cocktail__img" src="${data.strDrinkThumb}" alt="...">
                 <div class="cocktail__rendered-container">
                     <h5 class="cocktail__rendered-name">${data.strDrink}</h5>
                     <button onclick="displayDetails(${data.idDrink})" class="cocktail__detail-btn">Click for Instructions!</button>
                 </div>
-            </div>
         `
         cocktailDetails.appendChild(div);
 
@@ -224,7 +223,7 @@ let randomCocktail = () => {
         let randomData = response.data.drinks;
         cocktailName.innerHTML = randomData[0].strDrink;
         cocktailImg.src = randomData[0].strDrinkThumb;
-        showDetails();
+        errorMessage.innerHTML = '';
     })
 };
 
