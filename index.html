@@ -24,30 +24,25 @@
             <div>
                 <input type="text" placeholder="Search Your Cocktail" name="search" id="search-input">
                 <button id="search-btn">Search</button>
-                <button id="random" onclick="loadCocktail()"> Random Drink Picker </button>
+                <button id="random" onclick="randomCocktail()"> Randomizer </button>
             </div>
         </div>
         </div>
     <div class="cocktail-gallery__container">   
 <!-- random Cocktail Picker -->
-    <div class="margin" id="cocktail">
-        <div class="cocktails">
+    <div class="margin">
+        <div class="cocktail__random-container">
             <div class="cocktail__name"></div>
-            <img src="" class="cocktail__img" />
+            <img class="cocktail__img" />
         </div>
     </div>
 <!-- Cocktail  Selection -->
-        <div class="margin">     
+        <div class="margin cocktail__gallery">     
             <!-- Cocktail Rendered Area -->
-            <div id="cocktails">
-                
-            </div>
             <div id="cocktail-details">
-
             </div>
             <!-- Error Message -->
-            <h2 class="error-message" id="error-message">
-
+            <h2 id="error-message">
             </h2>
         </div>
     </div> 

@@ -7,22 +7,45 @@
 .cocktail {
 
     &__img {
-        height: 250px;
-        width: 250px;
+        max-height: 250px;
+        max-width: 250px;
         border: none;
+    }
+
+    &__random-container {
+        text-align: center;
+    }
+
+    &__rendered-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__rendered-name {
+        margin-right: 2rem;
+    }
+
+    &__detail-btn {
+        height: 1.5rem;
+        width: 20%;
     }
 }
 
-.cocktails {
-    text-align: center;
-}
 
 .cocktail-gallery {
 
     &__container {
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
         margin: 0;
     }
+}
+
+.cocktail-details {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .error-message {

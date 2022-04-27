@@ -104,7 +104,6 @@ footer.innerHTML = addFooter.render();
 
 // references
 const cocktailDetails = document.getElementById('cocktail-details')
-const allCocktails = document.getElementById('cocktails')
 const searchInput = document.getElementById('search-input')
 const searchBtn = document.getElementById('search-btn')
 const errorMessage = document.getElementById('error-message')
@@ -112,9 +111,8 @@ const errorMessage = document.getElementById('error-message')
 // search button event handler
 searchBtn.addEventListener('click', function() {
     //setting innerHTML empty so clicking doesn't make multiple new containers without clearing itself firsts
-    allCocktails.innerHTML = '';
     cocktailDetails.innerHTML = '';
-    cocktailImg.innerHTML = '';
+    cocktailImg.src = '';
     cocktailName.innerHTML = '';
     searchInput.value;
     const searchURL = axios 
@@ -138,10 +136,10 @@ searchBtn.addEventListener('click', function() {
     
 });
 
+// input field event handler
 searchInput.addEventListener('keydown', function() {
-    allCocktails.innerHTML = ''
-    cocktailDetails.innerHTML = ''
-    cocktailImg.innerHTML = '';
+    cocktailDetails.innerHTML = '';
+    cocktailImg.src = '';
     cocktailName.innerHTML = '';
 
     const searchURL = axios 
@@ -150,34 +148,26 @@ searchInput.addEventListener('keydown', function() {
     .then((response) => {
         console.log(response.data);
         let searchDrink = response.data;
+        displayCocktail(searchDrink.drinks);
 
-        if(searchInput.value === '') {
-            errorMessage.innerText = `Search box must be filled`;
-        } else {
-            displayCocktail(searchDrink.drinks);
-            errorMessage.innerText = '';
-        }
     })
     .catch((error) => {
-        searchInput.value = '';
         console.log(error);
     })
     
 });
-
 
 // display cocktail function
 const displayCocktail = (drink) => {
     drink.forEach(data => {
         console.log(data)
         const div = document.createElement('div')
-        div.classList.add('margin')
         div.innerHTML = `
-            <div class="">
+            <div class="margin">
                 <img class="cocktail__img" src="${data.strDrinkThumb}" alt="...">
-                <div class="">
-                    <h5 class="">${data.strDrink}</h5>
-                    <button onclick="displayDetails(${data.idDrink})" class="">Click for Instructions!</button>
+                <div class="cocktail__rendered-container">
+                    <h5 class="cocktail__rendered-name">${data.strDrink}</h5>
+                    <button onclick="displayDetails(${data.idDrink})" class="cocktail__detail-btn">Click for Instructions!</button>
                 </div>
             </div>
         `
@@ -186,8 +176,11 @@ const displayCocktail = (drink) => {
     });
 };
 
-// display drink details
+// display the details of the drinks
 const displayDetails = (drinkId) => {
+    cocktailImg.src = '';
+    cocktailName.innerHTML = '';
+
     const lookupURL = axios 
     .get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`) 
 
@@ -204,6 +197,7 @@ const showDetails = (drink) => {
         <div class="">
                 <div class="">
                     <img class="cocktail__img" src="${drink.strDrinkThumb}" alt="...">
+                    <h3><span class=""></span> ${drink.strDrink}</h3>
                     <h5><span class="">Category:</span> ${drink.strCategory}</h5>
                     <h5><span class="">Type of Glass:</span> ${drink.strGlass}</h5>
                     <h5 class="">Instructions:</h5><p>${drink.strIngredient1} & ${drink.strIngredient2}</p>
@@ -216,11 +210,11 @@ const showDetails = (drink) => {
 // creating random cocktail picker 
 
 let randomBtn = document.getElementById('.random');
-let cocktailContainer = document.querySelector('.cocktails')
 let cocktailImg = document.querySelector('.cocktail__img');
 let cocktailName = document.querySelector('.cocktail__name');
 
-let loadCocktail = () => {
+let randomCocktail = () => {
+    cocktailDetails.innerHTML = '';
 
     let randomURL = axios
     .get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
@@ -230,8 +224,7 @@ let loadCocktail = () => {
         let randomData = response.data.drinks;
         cocktailName.innerHTML = randomData[0].strDrink;
         cocktailImg.src = randomData[0].strDrinkThumb;
-
-        cocktailDetails.appendChild(cocktailContainer)
+        showDetails();
     })
 };
 

@@ -95,6 +95,10 @@ a {
 
 footer {
   background-color: #DEB887;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-top: 2rem;
 }
 
 .footer {
@@ -134,18 +138,36 @@ footer {
 }
 
 .cocktail__img {
-  height: 250px;
-  width: 250px;
+  max-height: 250px;
+  max-width: 250px;
   border: none;
 }
-
-.cocktails {
+.cocktail__random-container {
   text-align: center;
+}
+.cocktail__rendered-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cocktail__rendered-name {
+  margin-right: 2rem;
+}
+.cocktail__detail-btn {
+  height: 1.5rem;
+  width: 20%;
 }
 
 .cocktail-gallery__container {
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
   margin: 0;
+}
+
+.cocktail-details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .error-message {
