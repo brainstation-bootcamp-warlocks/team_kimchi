@@ -79,7 +79,7 @@ class Footer {
             </a>
         </div>
         <div class="footer__copyright-container">
-        <p class="footer__copyright">Copyright BecomeBartender &amp;copy 2022 All Rights Reserved</p>
+        <p class="footer__copyright">Copyright BecomeBartender © 2022 All Rights Reserved</p>
         </div>
 
         <div class="footer__name-container">
