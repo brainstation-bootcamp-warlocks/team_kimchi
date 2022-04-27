@@ -136,6 +136,7 @@ searchBtn.addEventListener('click', function() {
     
 });
 
+
 // input field event handler
 searchInput.addEventListener('keypress', function() {
     cocktailDetails.innerHTML = '';
@@ -155,7 +156,7 @@ searchInput.addEventListener('keypress', function() {
         console.log(error);
     })
     
-});
+}); 
 
 // display cocktail function
 const displayCocktail = (drink) => {
@@ -167,7 +168,7 @@ const displayCocktail = (drink) => {
                 <img class="cocktail__img" src="${data.strDrinkThumb}" alt="...">
                 <div class="cocktail__rendered-container">
                     <h5 class="cocktail__rendered-name">${data.strDrink}</h5>
-                    <button onclick="displayDetails(${data.idDrink})" class="cocktail__detail-btn">Click for Instructions!</button>
+                    <button onclick="renderDetails(${data.idDrink})" class="cocktail__detail-btn">Click for Instructions!</button>
                 </div>
         `
         cocktailDetails.appendChild(div);
@@ -176,7 +177,7 @@ const displayCocktail = (drink) => {
 };
 
 // display the details of the drinks
-const displayDetails = (drinkId) => {
+const renderDetails = (drinkId) => {
     cocktailImg.src = '';
     cocktailName.innerHTML = '';
 
@@ -185,11 +186,11 @@ const displayDetails = (drinkId) => {
 
     .then((response) => {
         console.log(response.data)
-        showDetails(response.data.drinks[0])
+        displayDetails(response.data.drinks[0])
     }
     )};
 
-const showDetails = (drink) => {
+const displayDetails = (drink) => {
     console.log(drink);
 
     cocktailDetails.innerHTML = `
@@ -223,7 +224,9 @@ let randomCocktail = () => {
         let randomData = response.data.drinks;
         cocktailName.innerHTML = randomData[0].strDrink;
         cocktailImg.src = randomData[0].strDrinkThumb;
+
         errorMessage.innerHTML = '';
+        cocktailDetails.innerHTML = '';
     })
 };
 
