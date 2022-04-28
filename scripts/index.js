@@ -138,7 +138,6 @@ searchBtn.addEventListener('click', function() {
         }
     })
     .catch((error) => {
-        searchInput.value = '';
         console.log(error);
     })
     
@@ -156,7 +155,13 @@ searchInput.addEventListener('keypress', function() {
     .then((response) => {
         console.log(response.data);
         let searchDrink = response.data;
-        displayCocktail(searchDrink.drinks);
+        
+        if(searchInput.value === '') {
+            errorMessage.innerText = `Search box must be filled`;
+        } else {
+            displayCocktail(searchDrink.drinks);
+            errorMessage.innerText = '';
+        }
 
     })
     .catch((error) => {
@@ -235,5 +240,3 @@ let randomCocktail = () => {
         cocktailDetails.innerHTML = '';
     })
 };
-
-
