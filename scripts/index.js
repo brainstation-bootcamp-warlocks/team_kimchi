@@ -11,10 +11,14 @@ class Header {
         return `
         <div class="header-margin margin">
             <div class="header__logo-container">
+            <a href="#">
             <img class="header__logo" src=${this.imageLink} />
+            </a>
             </div>
             <div class="header__title-container">
+                <a href="#">
                 <h1 class="header__title">BecomeBartender</h1>
+                <a/>
             </div>
         <nav class="nav-bar"> 
             <ul class="nav-bar__list">
@@ -86,7 +90,7 @@ class Footer {
         </div>
 
         <div class="footer__name-container">
-        <h3 class="footer__name">BecomeBartender</h3>
+            <h3 class="footer__name">BecomeBartender</h3>
         </div>
 
         
@@ -115,12 +119,11 @@ const errorMessage = document.getElementById('error-message')
 
 // search button event handler
 searchBtn.addEventListener('click', function() {
-    //setting innerHTML empty so clicking doesn't make multiple new containers without clearing itself firsts
+    searchInput.value;
     cocktailDetails.innerHTML = '';
     cocktailImg.src = '';
     cocktailName.innerHTML = '';
-    searchInput.value;
-    const searchURL = axios 
+    const searchAPI = axios 
     .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchInput.value}`)
     
     .then((response) => {
@@ -141,14 +144,13 @@ searchBtn.addEventListener('click', function() {
     
 });
 
-
 // input field event handler
 searchInput.addEventListener('keypress', function() {
     cocktailDetails.innerHTML = '';
     cocktailImg.src = '';
     cocktailName.innerHTML = '';
 
-    const searchURL = axios 
+    const searchAPI = axios 
     .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchInput.value}`)
     
     .then((response) => {
@@ -186,7 +188,7 @@ const renderDetails = (drinkId) => {
     cocktailImg.src = '';
     cocktailName.innerHTML = '';
 
-    const lookupURL = axios 
+    const lookupAPI = axios 
     .get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`) 
 
     .then((response) => {
@@ -219,9 +221,8 @@ let cocktailImg = document.querySelector('.cocktail__img');
 let cocktailName = document.querySelector('.cocktail__name');
 
 let randomCocktail = () => {
-    cocktailDetails.innerHTML = '';
 
-    let randomURL = axios
+    let randomAPI = axios
     .get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
 
     .then((response) => {

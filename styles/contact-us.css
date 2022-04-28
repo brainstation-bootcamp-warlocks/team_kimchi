@@ -148,4 +148,8 @@ footer {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+}
+
+input {
+  height: 1.5rem;
 }/*# sourceMappingURL=contact-us.css.map */
