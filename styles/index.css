@@ -1,0 +1,241 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Prompt", sans-serif, Verdana, sans-serif;
+}
+
+footer {
+  background-color: #DEB887;
+  width: 100%;
+}
+
+.margin {
+  margin: 0, 2rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #DEB887;
+}
+
+.hero {
+  margin: 0 auto;
+  width: 100vw;
+  height: 50vh;
+}
+.hero__video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  z-index: -100;
+  opacity: 0.8;
+}
+.hero__container {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.hero__title {
+  color: #DEB887;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.hero__title--span {
+  color: white;
+}
+.hero__search {
+  width: 50vw;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.hero__search-input, .hero__search-btn {
+  color: white;
+  background-color: #DEB887;
+  border: 1px solid white;
+  box-shadow: 0px 8px 15px rgb(252, 249, 249);
+}
+.hero__search-input::-moz-placeholder, .hero__search-btn::-moz-placeholder {
+  color: white;
+}
+.hero__search-input:-ms-input-placeholder, .hero__search-btn:-ms-input-placeholder {
+  color: white;
+}
+.hero__search-input::placeholder, .hero__search-btn::placeholder {
+  color: white;
+}
+.hero__search-input:hover, .hero__search-btn:hover {
+  color: #DEB887;
+  background-color: white;
+}
+
+#random {
+  color: white;
+  background-color: #DEB887;
+  border: 1px solid white;
+  box-shadow: 0px 8px 15px rgb(252, 249, 249);
+}
+#random:hover {
+  color: #DEB887;
+  background-color: white;
+}
+
+.header-margin {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+}
+.header__logo-container {
+  width: 30vw;
+}
+.header__logo {
+  height: 5rem;
+  width: 5rem;
+}
+.header__title-container {
+  width: 30vw;
+}
+.header__title {
+  font-size: 2.2rem;
+  font-family: fantasy;
+  text-align: center;
+  color: #DEB887;
+}
+
+.nav-bar {
+  width: 30vw;
+}
+.nav-bar__list {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: #DEB887;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-top: 2rem;
+}
+
+.footer {
+  margin: 0 auto;
+  width: 100vw;
+}
+.footer-container {
+  margin: 0 1rem;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.footer__icon {
+  width: 2rem;
+  height: 2rem;
+}
+.footer__icon-container {
+  display: flex;
+  justify-content: space-around;
+  width: 30vw;
+}
+.footer__copyright {
+  font-size: 0.8rem;
+  text-align: center;
+}
+.footer__copyright-container {
+  width: 30vw;
+}
+.footer__name {
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: "Prompt", sans-serif, Verdana, sans-serif;
+}
+.footer__name-container {
+  width: 30vw;
+}
+
+.cocktail__img {
+  margin-top: 1rem;
+  max-height: 250px;
+  max-width: 250px;
+  border: none;
+}
+.cocktail__random-container {
+  margin-top: 3rem;
+  text-align: center;
+}
+.cocktail__rendered {
+  text-align: center;
+  border: dotted 1px #DEB887;
+}
+.cocktail__rendered-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.cocktail__rendered-name {
+  margin-right: 2rem;
+  text-align: center;
+  color: #DEB887;
+  text-transform: uppercase;
+}
+.cocktail__detail-btn {
+  height: 1.5rem;
+  width: 10rem;
+  color: #DEB887;
+  font-weight: 600;
+  background-color: white;
+  border: 2px solid #DEB887;
+  box-shadow: 0px 8px 15px rgb(252, 249, 249);
+}
+.cocktail__detail-btn:hover {
+  color: white;
+  background-color: #DEB887;
+}
+.cocktail__name {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #DEB887;
+}
+.cocktail__search-result {
+  text-align: center;
+  margin: 0 4rem 2rem;
+}
+
+.cocktail-gallery__container {
+  padding-bottom: 4rem;
+  margin: 0;
+}
+
+.cocktail-details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.error-message {
+  margin: 0;
+}/*# sourceMappingURL=index.css.map */

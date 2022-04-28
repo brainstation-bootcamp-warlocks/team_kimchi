@@ -1,0 +1,87 @@
+@use './partials/global' as *;
+@use './partials/variables' as *;
+@use './partials/components/hero' as *;
+@use './partials/components/header' as *;
+@use './partials/components/footer' as *;
+
+.cocktail {
+
+    &__img {
+        margin-top: 1rem;
+        max-height: 250px;
+        max-width: 250px;
+        border: none;
+    }
+
+    &__random-container {
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    &__rendered {
+        text-align: center;
+        border: dotted 1px $primary-brown;
+    }
+
+    &__rendered-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__rendered-name {
+        margin-right: 2rem;
+        text-align: center;
+        color: $primary-brown;
+        text-transform: uppercase;
+    }
+
+    &__detail-btn {
+        height: 1.5rem;
+        width: 10rem;
+        color: $primary-brown;
+        font-weight: 600;
+        background-color: white;
+        border: 2px solid $primary-brown;
+        box-shadow: 0px 8px 15px rgb(252, 249, 249);
+
+        &:hover {
+            color: white;
+            background-color: $primary-brown;
+        }
+    }
+
+    &__name {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: $primary-brown;
+    }
+
+    &__search-result {
+        text-align: center;
+        margin: 0 4rem 2rem;
+    }
+}
+
+
+.cocktail-gallery {
+
+    &__container {
+        padding-bottom: 4rem;
+        margin: 0;
+    }
+}
+
+.cocktail-details {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.error-message {
+    margin: 0;
+}
+
+

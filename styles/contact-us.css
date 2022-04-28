@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Prompt", sans-serif, Verdana, sans-serif;
+}
+
+footer {
+  background-color: #DEB887;
+  width: 100%;
+}
+
+.margin {
+  margin: 0, 2rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #DEB887;
+}
+
+.header-margin {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+}
+.header__logo-container {
+  width: 30vw;
+}
+.header__logo {
+  height: 5rem;
+  width: 5rem;
+}
+.header__title-container {
+  width: 30vw;
+}
+.header__title {
+  font-size: 2.2rem;
+  font-family: fantasy;
+  text-align: center;
+  color: #DEB887;
+}
+
+.nav-bar {
+  width: 30vw;
+}
+.nav-bar__list {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: #DEB887;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-top: 2rem;
+}
+
+.footer {
+  margin: 0 auto;
+  width: 100vw;
+}
+.footer-container {
+  margin: 0 1rem;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.footer__icon {
+  width: 2rem;
+  height: 2rem;
+}
+.footer__icon-container {
+  display: flex;
+  justify-content: space-around;
+  width: 30vw;
+}
+.footer__copyright {
+  font-size: 0.8rem;
+  text-align: center;
+}
+.footer__copyright-container {
+  width: 30vw;
+}
+.footer__name {
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: "Prompt", sans-serif, Verdana, sans-serif;
+}
+.footer__name-container {
+  width: 30vw;
+}
+
+.contact {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  color: white;
+  background: url(../assets/contactus_background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+.contact__heading {
+  font-size: 2rem;
+  color: #DEB887;
+}
+.contact__name, .contact__email, .contact__message {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.contact__submit {
+  color: #DEB887;
+  width: 50%;
+  height: 10%;
+  margin: 0 auto;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+}
+.contact__submit:hover {
+  background-color: #DEB887;
+  color: white;
+}
+
+#contact__container {
+  width: 50vw;
+  height: 70vh;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+input {
+  height: 1.5rem;
+}/*# sourceMappingURL=contact-us.css.map */

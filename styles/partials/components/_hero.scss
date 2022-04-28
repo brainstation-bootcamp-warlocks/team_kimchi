@@ -1,0 +1,71 @@
+@use "../variables" as *;
+
+.hero {
+    margin: 0 auto;
+    width: 100vw;
+    height: 50vh;
+
+    &__video {
+        object-fit: cover;
+        width: 100vw;
+        height: 50vh;
+        position: absolute;
+        z-index: -100;
+        opacity: 0.8;
+    }
+
+    &__container {
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__title {
+        color: $primary-brown;
+        font-size: 2rem;
+        text-transform: uppercase;
+
+        &--span {
+            color: white;
+        }
+    }
+
+    &__search{
+        width: 50vw;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+
+        &-input, &-btn {
+            color: white;
+            background-color: $primary-brown;
+            border: 1px solid white;
+            box-shadow: 0px 8px 15px rgb(252, 249, 249);
+            
+            &::placeholder {
+                color: white;
+                
+            }
+
+            &:hover {
+                color: $primary-brown;
+                background-color: white;
+            }
+        }
+    }
+}
+
+#random {
+    color: white;
+    background-color: $primary-brown;
+    border: 1px solid white;
+    box-shadow: 0px 8px 15px rgb(252, 249, 249);
+    &:hover {
+        color: $primary-brown;
+        background-color: white;
+    }
+}

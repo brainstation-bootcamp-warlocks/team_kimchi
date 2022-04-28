@@ -1,0 +1,54 @@
+@use "./partials/variables" as *;
+@use "./partials/global" as *;
+@use './partials/components/header' as *;
+@use './partials/components/footer' as *;
+
+
+.about {
+    margin: 0 auto;
+    width: 100vw;
+    background: url(../assets/about_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+    color: white;
+
+    &__container {
+        width: 50vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 2rem;
+        color: $primary-brown;
+    }
+
+    &__subtitle {
+        font-size: 1.6rem;
+        color: $primary-brown;
+    }
+
+    &__main-content, &__sub-content {
+        font-size: 1.2rem;
+
+        &--lists {
+            font-size: 1.2rem;
+            padding: 0.5rem 0;
+        }
+    }
+
+}
+
+.cocktailImg {
+    border: 10px solid #fff;
+    border-radius: 10px;
+    height: 300px;
+    }
+
+.cocktails {
+    margin-bottom: 10vh;
+}

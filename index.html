@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <title>BB</title>
 </head>
 <body>
-    <script src="index.js"></script>
+<!-- Header Section -->
+    <header id='header'>
+    </header>
+
+<!-- Main Section -->
+    <main>
+<!-- Hero Banner -->
+        <div class="hero margin">
+        <video class=hero__video src="./assets/backgroundvideo.mp4" autoplay loop playsinline muted></video>
+        <div class="hero__container">
+            <h2 class="hero__title"><span class="hero__title--span">B</span>ecome <span class="hero__title--span">B</span>artender</h2>
+            <div class="hero__search">
+                <input type="text" placeholder="Search cocktail here" name="search" id="search-input">
+                <button id="search-btn">Search</button>
+                <button id="random" onclick="randomCocktail()"> Randomizer </button>
+            </div>
+        </div>
+        </div>
+    
+    <div class="margin cocktail-gallery__container">   
+<!-- random Cocktail Picker -->
+    <div class="">
+        <div class="cocktail__random-container">
+            <div class="cocktail__name"></div>
+            <img class="cocktail__img" />
+        </div>
+    </div>
+<!-- Cocktail  Selection -->
+        <div class="cocktail__gallery">     
+            <!-- Cocktail Rendered Area -->
+            <div class="cocktail__search-result" id="cocktail-details">
+            </div>
+            <!-- Error Message -->
+            <h2 id="error-message">
+            </h2>
+        </div>
+    </div> 
+    </main>
+
+<!-- Footer Section -->
+    <footer id="footer">
+
+    </footer>
+
+    <script src="./scripts/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.0/axios.min.js"></script>
 </body>
 </html>
