@@ -79,7 +79,7 @@ class Footer {
             </a>
         </div>
         <div class="footer__copyright-container">
-        <p class="footer__copyright">Copyright BecomeBartender &amp;copy 2022 All Rights Reserved</p>
+        <p class="footer__copyright">Copyright BecomeBartender © 2022 All Rights Reserved</p>
         </div>
 
         <div class="footer__name-container">
@@ -96,64 +96,3 @@ const addFooter = new Footer();
 footer.innerHTML = addFooter.render();
 
 
-// creating random cocktail picker 
-
-let i = 0;
-let cocktail = []
-let nextBtn = document.querySelector('.next');
-let prevBtn = document.querySelector('.prev');
-let cocktailImg = document.querySelector('.cocktailImg');
-let cocktailName = document.querySelector('.cocktailName');
-
-
-
-const loadCocktail = () => {
-    axios
-    .get('https://www.thecocktaildb.com/api/json/v2/9973533/randomselection.php')
-    .then((response) => {
-        console.log(response.data);
-        let cocktail = response.data;
-
-        cocktailName.innerHTML = `${cocktail.drinks[0].strDrink}`;
-        cocktailImg.src = cocktail.drinks[0].strDrinkThumb;
-    })
-    .catch((error) => {
-        console.log(error);
-    });
-};
-
-loadCocktail();
-
-
-/*     function loop() {
-        if (i === cocktail[0].length) {
-            i = 0;
-        } else if (i === -1) {
-            i = cocktail[0].length - 1;
-        }
-    }
-    
-    function addData() {
-        cocktailName.innerHTML = `${cocktail.drink[0].strDrink}`
-        cocktailImg.src = cocktail.drink[0].strDrinkThumb
-    
-    }
-    
-    function clearImg() {
-        cocktailName.innerHTML = ``;
-        cocktailImg.src = null;
-    }
-    
-    nextBtn.addEventListener('click', function () {
-        i++;
-        loop();
-        clearImg();
-        addData();
-    })
-    
-    prevBtn.addEventListener('click', function () {
-        i--;
-        loop();
-        clearImg();
-        addData();
-    }) */

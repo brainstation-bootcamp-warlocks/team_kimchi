@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.0/axios.min.js" defer></script>
     <title>BB</title>
 </head>
 <body>
@@ -20,33 +21,40 @@
         <video class=hero__video src="./assets/backgroundvideo.mp4" autoplay loop playsinline muted></video>
         <div class="hero__container">
             <h2 class="hero__title"><span class="hero__title--span">B</span>ecome <span class="hero__title--span">B</span>artender</h2>
-            <div>
-                <input type="text" placeholder="Search Your Cocktail" name="search" id="search-input">
+            <div class="hero__search">
+                <input type="text" placeholder="Search cocktail here" name="search" id="search-input">
                 <button id="search-btn">Search</button>
+                <button id="random" onclick="randomCocktail()"> Randomizer </button>
             </div>
         </div>
         </div>
+    
+    <div class="margin cocktail-gallery__container">   
+<!-- random Cocktail Picker -->
+    <div class="">
+        <div class="cocktail__random-container">
+            <div class="cocktail__name"></div>
+            <img class="cocktail__img" />
+        </div>
+    </div>
 <!-- Cocktail  Selection -->
-        <div class="margin">
-            <!-- Cocktail Area -->
-            <div id="cocktails">
+        <div class="cocktail__gallery">     
+            <!-- Cocktail Rendered Area -->
+            <div class="cocktail__search-result" id="cocktail-details">
             </div>
-
-            <!-- Details Area -->
-            <div id="cocktail-details">
-            </div>
-
             <!-- Error Message -->
             <h2 id="error-message">
             </h2>
         </div>
+    </div> 
     </main>
 
 <!-- Footer Section -->
     <footer id="footer">
+
     </footer>
 
     <script src="./scripts/index.js"></script>
-    <script src="./scripts/search.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.0/axios.min.js"></script>
 </body>
 </html>
