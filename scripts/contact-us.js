@@ -103,7 +103,7 @@ const addFooter = new Footer();
 footer.innerHTML = addFooter.render();
 
 let heading = document.createElement('h2')
-heading.innerHTML = "Contact Us"
+heading.innerHTML = "CONTACT US"
 heading.classList.add("contact__heading")
 contactContainer.appendChild(heading);
 

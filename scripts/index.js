@@ -103,19 +103,18 @@ const addFooter = new Footer();
 footer.innerHTML = addFooter.render();
 
 // references
-const cocktailDetails = document.getElementById('cocktail-details')
-const searchInput = document.getElementById('search-input')
-const searchBtn = document.getElementById('search-btn')
-const errorMessage = document.getElementById('error-message')
+const searchInput = document.getElementById('search-input');
+const searchBtn = document.getElementById('search-btn');
+const cocktailDetails = document.getElementById('cocktail-details');
+const errorMessage = document.getElementById('error-message');
 
 // search button event handler
 searchBtn.addEventListener('click', function() {
-    //setting innerHTML empty so clicking doesn't make multiple new containers without clearing itself firsts
+    searchInput.value;
     cocktailDetails.innerHTML = '';
     cocktailImg.src = '';
     cocktailName.innerHTML = '';
-    searchInput.value;
-    const searchURL = axios 
+    const searchAPI = axios 
     .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchInput.value}`)
     
     .then((response) => {
@@ -136,14 +135,13 @@ searchBtn.addEventListener('click', function() {
     
 });
 
-
 // input field event handler
 searchInput.addEventListener('keypress', function() {
     cocktailDetails.innerHTML = '';
     cocktailImg.src = '';
     cocktailName.innerHTML = '';
 
-    const searchURL = axios 
+    const searchAPI = axios 
     .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchInput.value}`)
     
     .then((response) => {
@@ -181,7 +179,7 @@ const renderDetails = (drinkId) => {
     cocktailImg.src = '';
     cocktailName.innerHTML = '';
 
-    const lookupURL = axios 
+    const lookupAPI = axios 
     .get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`) 
 
     .then((response) => {
@@ -214,9 +212,8 @@ let cocktailImg = document.querySelector('.cocktail__img');
 let cocktailName = document.querySelector('.cocktail__name');
 
 let randomCocktail = () => {
-    cocktailDetails.innerHTML = '';
 
-    let randomURL = axios
+    let randomAPI = axios
     .get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
 
     .then((response) => {
