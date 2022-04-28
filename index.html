@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Prompt:wght@300&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.0/axios.min.js" defer></script>
     <title>BB</title>
 </head>
 <body>
@@ -21,8 +20,8 @@
         <video class=hero__video src="./assets/backgroundvideo.mp4" autoplay loop playsinline muted></video>
         <div class="hero__container">
             <h2 class="hero__title"><span class="hero__title--span">B</span>ecome <span class="hero__title--span">B</span>artender</h2>
-            <div>
-                <input type="text" placeholder="Search Your Cocktail" name="search" id="search-input">
+            <div class="hero__search">
+                <input type="text" placeholder="Search cocktail here" name="search" id="search-input">
                 <button id="search-btn">Search</button>
                 <button id="random" onclick="randomCocktail()"> Randomizer </button>
             </div>

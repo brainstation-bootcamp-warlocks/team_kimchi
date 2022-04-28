@@ -10,10 +10,14 @@ class Header {
         return `
         <div class="header-margin margin">
             <div class="header__logo-container">
+            <a href="../index.html">
             <img class="header__logo" src=${this.imageLink} />
+            </a>
             </div>
             <div class="header__title-container">
+                <a href="../index.html">
                 <h1 class="header__title">BecomeBartender</h1>
+                </a>
             </div>
         <nav class="nav-bar"> 
             <ul class="nav-bar__list">

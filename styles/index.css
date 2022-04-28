@@ -52,6 +52,43 @@ a {
 .hero__title--span {
   color: white;
 }
+.hero__search {
+  width: 50vw;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.hero__search-input, .hero__search-btn {
+  color: white;
+  background-color: #DEB887;
+  border: 1px solid white;
+  box-shadow: 0px 8px 15px rgb(252, 249, 249);
+}
+.hero__search-input::-moz-placeholder, .hero__search-btn::-moz-placeholder {
+  color: white;
+}
+.hero__search-input:-ms-input-placeholder, .hero__search-btn:-ms-input-placeholder {
+  color: white;
+}
+.hero__search-input::placeholder, .hero__search-btn::placeholder {
+  color: white;
+}
+.hero__search-input:hover, .hero__search-btn:hover {
+  color: #DEB887;
+  background-color: white;
+}
+
+#random {
+  color: white;
+  background-color: #DEB887;
+  border: 1px solid white;
+  box-shadow: 0px 8px 15px rgb(252, 249, 249);
+}
+#random:hover {
+  color: #DEB887;
+  background-color: white;
+}
 
 .header-margin {
   margin: 0 1rem;
@@ -139,6 +176,7 @@ footer {
 }
 
 .cocktail__img {
+  margin-top: 1rem;
   max-height: 250px;
   max-width: 250px;
   border: none;
@@ -149,6 +187,7 @@ footer {
 }
 .cocktail__rendered {
   text-align: center;
+  border: dotted 1px #DEB887;
 }
 .cocktail__rendered-container {
   display: flex;
@@ -158,14 +197,27 @@ footer {
 }
 .cocktail__rendered-name {
   margin-right: 2rem;
+  text-align: center;
+  color: #DEB887;
+  text-transform: uppercase;
 }
 .cocktail__detail-btn {
   height: 1.5rem;
   width: 10rem;
+  color: #DEB887;
+  font-weight: 600;
+  background-color: white;
+  border: 2px solid #DEB887;
+  box-shadow: 0px 8px 15px rgb(252, 249, 249);
+}
+.cocktail__detail-btn:hover {
+  color: white;
+  background-color: #DEB887;
 }
 .cocktail__name {
   font-size: 1.75rem;
   font-weight: 600;
+  color: #DEB887;
 }
 .cocktail__search-result {
   text-align: center;

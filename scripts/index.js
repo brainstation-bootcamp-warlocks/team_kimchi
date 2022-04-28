@@ -11,10 +11,14 @@ class Header {
         return `
         <div class="header-margin margin">
             <div class="header__logo-container">
+            <a href="#">
             <img class="header__logo" src=${this.imageLink} />
+            </a>
             </div>
             <div class="header__title-container">
+                <a href="#">
                 <h1 class="header__title">BecomeBartender</h1>
+                <a/>
             </div>
         <nav class="nav-bar"> 
             <ul class="nav-bar__list">
@@ -86,7 +90,7 @@ class Footer {
         </div>
 
         <div class="footer__name-container">
-        <h3 class="footer__name">BecomeBartender</h3>
+            <h3 class="footer__name">BecomeBartender</h3>
         </div>
 
         
@@ -103,10 +107,15 @@ const addFooter = new Footer();
 footer.innerHTML = addFooter.render();
 
 // references
-const searchInput = document.getElementById('search-input');
-const searchBtn = document.getElementById('search-btn');
-const cocktailDetails = document.getElementById('cocktail-details');
-const errorMessage = document.getElementById('error-message');
+const cocktailDetails = document.getElementById('cocktail-details')
+
+const searchInput = document.getElementById('search-input')
+searchInput.classList.add("hero__search-input")
+
+const searchBtn = document.getElementById('search-btn')
+searchBtn.classList.add("hero__search-btn")
+
+const errorMessage = document.getElementById('error-message')
 
 // search button event handler
 searchBtn.addEventListener('click', function() {
