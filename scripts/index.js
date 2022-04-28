@@ -119,10 +119,10 @@ const errorMessage = document.getElementById('error-message')
 
 // search button event handler
 searchBtn.addEventListener('click', function() {
-    searchInput.value;
     cocktailDetails.innerHTML = '';
     cocktailImg.src = '';
     cocktailName.innerHTML = '';
+
     const searchAPI = axios 
     .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchInput.value}`)
     
@@ -138,14 +138,13 @@ searchBtn.addEventListener('click', function() {
         }
     })
     .catch((error) => {
-        searchInput.value = '';
         console.log(error);
     })
     
 });
 
 // input field event handler
-searchInput.addEventListener('keypress', function() {
+searchInput.addEventListener('keydown', function() {
     cocktailDetails.innerHTML = '';
     cocktailImg.src = '';
     cocktailName.innerHTML = '';
@@ -156,7 +155,13 @@ searchInput.addEventListener('keypress', function() {
     .then((response) => {
         console.log(response.data);
         let searchDrink = response.data;
-        displayCocktail(searchDrink.drinks);
+        
+        if(searchInput.value === '') {
+            errorMessage.innerText = `Search box must be filled`;
+        } else {
+            displayCocktail(searchDrink.drinks);
+            errorMessage.innerText = '';
+        }
 
     })
     .catch((error) => {
@@ -166,9 +171,8 @@ searchInput.addEventListener('keypress', function() {
 }); 
 
 // display cocktail function
-const displayCocktail = (drink) => {
-    drink.forEach(data => {
-        console.log(data);
+const displayCocktail = (drinkData) => {
+    drinkData.forEach(data => {
         const div = document.createElement('div');
         div.classList.add("cocktail__rendered");
         div.innerHTML = `
@@ -183,11 +187,8 @@ const displayCocktail = (drink) => {
     });
 };
 
-// display the details of the drinks
+// rendering the details of the drinks
 const renderDetails = (drinkId) => {
-    cocktailImg.src = '';
-    cocktailName.innerHTML = '';
-
     const lookupAPI = axios 
     .get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`) 
 
@@ -197,30 +198,32 @@ const renderDetails = (drinkId) => {
     }
     )};
 
+// placing that data in a new container which only gets called when the button is pressed
 const displayDetails = (drink) => {
     console.log(drink);
 
     cocktailDetails.innerHTML = `
-        <div class="">
-                <div class="">
+                <div class="margin">
                     <img class="cocktail__img" src="${drink.strDrinkThumb}" alt="...">
-                    <h3><span class=""></span> ${drink.strDrink}</h3>
-                    <h5><span class="">Category:</span> ${drink.strCategory}</h5>
-                    <h5><span class="">Type of Glass:</span> ${drink.strGlass}</h5>
-                    <h5 class="">Instructions:</h5><p>${drink.strIngredient1} & ${drink.strIngredient2}</p>
+                    <h3>${drink.strDrink}</h3>
+                    <h5>Category: ${drink.strCategory}</h5>
+                    <h5>Type of Glass: ${drink.strGlass}</h5>
+                    <h3>Instructions:</h3>
+                    <p>${drink.strIngredient1} & ${drink.strIngredient2}</p>
                     <p>${drink.strInstructions}</p>
                 </div>
-        </div>
     `
-}
+};
 
 // creating random cocktail picker 
 
-let randomBtn = document.getElementById('.random');
-let cocktailImg = document.querySelector('.cocktail__img');
-let cocktailName = document.querySelector('.cocktail__name');
+const randomBtn = document.getElementById('.random');
+const cocktailImg = document.querySelector('.cocktail__img');
+const cocktailName = document.querySelector('.cocktail__name');
 
-let randomCocktail = () => {
+//connected to randomizer button 
+
+const randomCocktail = () => {
 
     let randomAPI = axios
     .get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
@@ -235,5 +238,3 @@ let randomCocktail = () => {
         cocktailDetails.innerHTML = '';
     })
 };
-
-
